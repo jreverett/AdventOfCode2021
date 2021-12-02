@@ -10,8 +10,8 @@ function part1() {
   const position = { horizontal: 0, depth: 0 };
 
   vectors
-    .map((v) => v.split(' ')) // produces [['direction', 'position'], ['...' , '...']]
-    .map((v) => [v[0], Number(v[1])]) // produces [['direction', position], ['...' , ...]]
+    .map((v) => v.split(' ')) // produces [['direction', 'magnitude'], ['...' , '...']]
+    .map((v) => [v[0], Number(v[1])]) // produces [['direction', magnitude], ['...' , ...]]
     .forEach((v) => {
       switch (v[0]) {
         case 'forward':
