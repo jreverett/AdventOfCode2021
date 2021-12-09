@@ -17,22 +17,22 @@ function part1() {
       let adjacentValues = [];
 
       // check position above
-      if (positions[i - 1] !== undefined) {
+      if (i - 1 >= 0) {
         adjacentValues.push(positions[i - 1][j]);
       }
 
       // check position below
-      if (positions[i + 1] !== undefined) {
+      if (i + 1 < positions.length) {
         adjacentValues.push(positions[i + 1][j]);
       }
 
       // check position left
-      if (positions[i][j - 1] !== undefined) {
+      if (j - 1 >= 0) {
         adjacentValues.push(positions[i][j - 1]);
       }
 
       // check position right
-      if (positions[i][j + 1] !== undefined) {
+      if (j + 1 < positions[i].length) {
         adjacentValues.push(positions[i][j + 1]);
       }
 
@@ -82,22 +82,22 @@ function floodfill(map, i, j) {
   let size = 1;
 
   // check position above
-  if (map[i - 1] !== undefined) {
+  if (i - 1 >= 0) {
     size += floodfill(map, i - 1, j);
   }
 
   // check position below
-  if (map[i + 1] !== undefined) {
+  if (i + 1 < map.length) {
     size += floodfill(map, i + 1, j);
   }
 
   // check position left
-  if (map[i][j - 1] !== undefined) {
+  if (j - 1 >= 0) {
     size += floodfill(map, i, j - 1);
   }
 
   // check position right
-  if (map[i][j + 1] !== undefined) {
+  if (j + 1 < map[i].length) {
     size += floodfill(map, i, j + 1);
   }
 
