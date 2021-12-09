@@ -8,11 +8,11 @@ const entries = fs
   .filter((x) => x);
 
 function part1() {
-  var numOccourances = entries
+  var numOccurrences = entries
     .map((e) => e[1].split(' ').filter((x) => [2, 3, 4, 7].includes(x.length)))
     .reduce((acc, cur) => acc + cur.length, 0);
 
-  console.log(`there are ${numOccourances} occurrances of 1, 4, 7 and 8`);
+  console.log(`there are ${numOccurrences} occurrences of 1, 4, 7 and 8`);
 }
 
 function part2() {
