@@ -16,6 +16,7 @@ function part1() {
     // increment each position
     currentGrid = currentGrid.map((line) => (line = line.map((x) => ++x)));
 
+    // while there are values greater than 9
     while (
       // prettier-ignore
       currentGrid
@@ -69,6 +70,7 @@ function incrementNeighbours(grid, i, j, flashedPositions) {
 }
 
 function incrIfNotFlashed(grid, i, j, flashedPositions) {
+  // flashed positions should stay at 0 until the next step
   const position = [i, j];
   const hasFlashed = flashedPositions.some((x) =>
     x.every((value, index) => value === position[index])
